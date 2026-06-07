@@ -49,3 +49,5 @@ coverage/
 # Uploads / local storage
 uploads/
 minio_data/
+*.zip
+venv/
