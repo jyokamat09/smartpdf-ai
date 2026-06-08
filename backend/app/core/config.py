@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     # Redis
     redis_url: str = "redis://localhost:6379/0"
 
-    # MinIO
+    # MinIO / Backblaze B2
     minio_endpoint: str
     minio_access_key: str
     minio_secret_key: str
@@ -34,9 +34,6 @@ class Settings(BaseSettings):
     supabase_anon_key: str
     supabase_service_key: str
 
-    # Kafka
-    kafka_bootstrap_servers: str = "localhost:9092"
-
     # Email
     smtp_host: str = "smtp.gmail.com"
     smtp_port: int = 587
@@ -47,6 +44,7 @@ class Settings(BaseSettings):
     next_public_api_url: str = "http://localhost:8000"
     next_public_supabase_url: str = ""
     next_public_supabase_anon_key: str = ""
+    frontend_url: str = "http://localhost:3000"
 
     class Config:
         env_file = ".env"
